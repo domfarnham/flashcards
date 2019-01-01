@@ -2,7 +2,13 @@ doctype html
 html(lang='en')
   head
     title Flash Cards
+    link(rel="stylesheet", href="/static/stylesheets/style.css")
   body
     include includes/header.pug
-    block content
+    section.namecard
+      .namecard-hello
+        p.namecard-greeting Welcome, #{name}!
+        block content
+      h1.namecard-prompt Let's get started
+      a.namecard-submit(href='/cards') Begin!
     include includes/footer.pug

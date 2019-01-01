@@ -1,5 +1,6 @@
 extends layout
 
 block content
-  section#content
-    h2 Welcome, student!
+  form.namecard-exit(action='/goodbye', method='POST')
+    button(type='submit')
+      img(src='static/img/close.svg')

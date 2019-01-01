@@ -2,9 +2,10 @@ extends layout
 
 block content
   section#content
-    h2= prompt
+    h2= text
     if hint
       p
         i Hint: #{hint}
-    else
-      p (There is no hint.)
+    a(href=`/cards/${id}?side=${sideToShow}`) #{sideToShowText}
+    br
+    a(href=`/cards`) Next card
