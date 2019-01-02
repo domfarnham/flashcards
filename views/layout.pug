@@ -5,10 +5,5 @@ html(lang='en')
     link(rel="stylesheet", href="/static/stylesheets/style.css")
   body
     include includes/header.pug
-    section.namecard
-      .namecard-hello
-        p.namecard-greeting Welcome, #{name}!
-        block content
-      h1.namecard-prompt Let's get started
-      a.namecard-submit(href='/cards') Begin!
+    block content
     include includes/footer.pug

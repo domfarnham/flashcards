@@ -1,7 +1,11 @@
 extends layout
 
 block content
-  form(action='/hello', method='post')
-    label(for="username") Please enter your name: 
-      input(type="text", name="username")
-      button(type="submit") Submit
+  section.namecard
+  .namecard-hello
+    p.namecard-greeting Hello, student!
+  form.namecard-form(action='', method='post')
+    label.namecard-prompt
+      | Please enter your name:
+    input.namecard-name(type='text', name='username')
+    button.namecard-submit(type='submit') Submit
