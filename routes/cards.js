@@ -10,7 +10,6 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/:id', (req, res, next) => {
-  console.log(req.params.id)
   const { side } = req.query
   const { id } = req.params
 
@@ -27,14 +26,14 @@ router.get('/:id', (req, res, next) => {
     templateData.hint = hint
     templateData.sideToShow = 'answer'
     templateData.sideToShowText = 'Answer'
+    return res.render('questionSide', templateData)
   } else if (side.toLowerCase() === 'answer') {
     templateData.sideToShow = 'question'
     templateData.sideToShowText = 'Question'
+    return res.render('answerSide', templateData)
   } else {
     res.redirect('/cards')
   }
-
-  res.render('card', templateData)
 })
 
 module.exports = router
