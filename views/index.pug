@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  form.namecard-exit(action='/goodbye', method='POST')
-    button(type='submit')
-      img(src='static/img/close.svg')
+  section.namecard
+    .namecard-hello
+    p.namecard-greeting Welcome, #{name}!
+    form.namecard-exit(action='/goodbye', method='POST')
+      button(type='submit')
+        img(src='static/img/close.svg')
+  h1.namecard-prompt Let's get started
+  a.namecard-submit(href='/cards') Begin!
