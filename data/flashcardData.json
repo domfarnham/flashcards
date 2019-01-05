@@ -3,6 +3,11 @@
     "title": "JavaScript Flashcards",
       "cards": [
         {
+          "question": "What does displaced mean?",
+          "hint": "What happens if someone displaces you?",
+          "answer": "Moved on"
+        },
+        {
           "question": "What language are Express apps written in?",
           "hint": "It starts with a \"J\"",
           "answer": "JavaScript"
