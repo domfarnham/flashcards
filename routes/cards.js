@@ -16,6 +16,11 @@ router.get('/:id', (req, res, next) => {
   if (!side) {
     return res.redirect(`/cards/${id}?side=question`)
   }
+  if (typeof (id) !== 'number') {
+    const err = new Error('ID is not a number')
+    err.status = 400
+    return next(err)
+  }
   const name = req.cookies.username
   const text = cards[id][side]
   const { hint } = cards[id]
